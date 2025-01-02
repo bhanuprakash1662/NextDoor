@@ -5,6 +5,8 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import FilterComponent from './filter';
 
+import "./NavbarComp.css";
+
 function Navbar1() {
   const [showFilters, setShowFilters] = useState(false);
 
@@ -100,10 +102,14 @@ function Navbar1() {
           >
             <FilterComponent />
           </div>
+          
         )}
       </Navbar>
+    
     </div>
+    
   );
+  
 }
 
 export default Navbar1;

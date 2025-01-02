@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #121a2b;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@
   color: #61dafb;
 }
 .dropdown-list{
-  display: flex;
+  display: flex;    
   justify-content: space-evenly;
 }
 

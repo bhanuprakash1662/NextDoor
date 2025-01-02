@@ -1,0 +1,34 @@
+/* Custom Navbar */
+.custom-navbar {
+    background-color: transparent !important; /* Transparent background */
+    box-shadow: none; /* Removes shadow */
+    border: none; /* Removes border */
+    padding: 10px 20px; /* Adds some spacing */
+  }
+
+  /* Custom Buttons */
+  .custom-button {
+    border: 2px solid white; /* White border for buttons */
+    border-radius: 5px; /* Rounded corners */
+    color: white; /* Button text color */
+    background-color: transparent; /* Transparent background */
+    padding: 10px 15px; /* Button padding */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-left: 10px; /* Adds space between buttons */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  /* Hover Effect for SIGNIN Button */
+  .signin-button:hover {
+    background-color: #4CAF50; /* Green background on hover */
+    color: white; /* White text */
+  }
+  
+  /* Hover Effect for LOGIN Button */
+  .login-button:hover {
+    background-color: #007BFF; /* Blue background on hover */
+    color: white; /* White text */
+  }
+  
+  
