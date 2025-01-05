@@ -1,59 +1,4 @@
-// import Container from 'react-bootstrap/Container';
-// import Navbar from 'react-bootstrap/Navbar';
-// import Navbar1 from './Navbar1';
 
-
-
-
-// function NavbarComp() {
-//   return (
-//     <div>
-// <Navbar className="bg-body-tertiary">
-//       <Container>
-//         <Navbar.Brand href="#home">NextDoor</Navbar.Brand>
-//         <Navbar.Toggle />
-//         <Navbar.Collapse className="justify-content-end">
-//          <button style={{borderColor:"white"}}>SIGNIN</button><span></span>
-//          <button style={{borderColor:"white"}}>LOGIN</button>
-//         </Navbar.Collapse>
-//       </Container>
-//     </Navbar>
-//    <Navbar1/>
-
-//     </div>
-    
-
-//   );
-// }
-
-// export default NavbarComp;
-// import React from "react";
-// import Container from "react-bootstrap/Container";
-// import Navbar from "react-bootstrap/Navbar";
-// import Navbar1 from "./Navbar1";
-
-//  // Import the CSS file for custom styles
-
-// function NavbarComp() {
-//   return (
-//     <div>
-//       <Navbar className="custom-navbar" id="barr">
-//         <Container>
-//           <Navbar.Brand href="#home">NextDoor</Navbar.Brand>
-//           <Navbar.Toggle />
-//           <Navbar.Collapse className="justify-content-end">
-//             <button className="custom-button signin-button">SIGNIN</button>
-//             <span></span>
-//             <button className="custom-button login-button">LOGIN</button>
-//           </Navbar.Collapse>
-//         </Container>
-//       </Navbar>
-//       <Navbar1 />
-//     </div>
-//   );
-// }
-
-// export default NavbarComp;
 import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
@@ -61,6 +6,7 @@ import Navbar1 from "./Navbar1";
 // import Signin from "./details/sign";
 // import Login from "./details/login";
 import './navbar.css'
+// import Sidebar from "./Sidebar";
 
 function NavbarComp() {
   const [showLogin, setShowLogin] = useState(false);
@@ -96,9 +42,11 @@ function NavbarComp() {
               LOGIN
             </button>
             <span></span>
+            {/* <Sidebar/> */}
             
           </Navbar.Collapse>
         </Container>
+       
       </Navbar>
       <Navbar1 />
       {showLogin && (
