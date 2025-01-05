@@ -21,13 +21,13 @@
   
   /* Hover Effect for SIGNIN Button */
   .signin-button:hover {
-    background-color: #4CAF50; /* Green background on hover */
+    background-color: #ddb01b; /* Green background on hover */
     color: white; /* White text */
   }
   
   /* Hover Effect for LOGIN Button */
   .login-button:hover {
-    background-color: #007BFF; /* Blue background on hover */
+    background-color: #c7d134; /* Blue background on hover */
     color: white; /* White text */
   }
   

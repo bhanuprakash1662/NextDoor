@@ -6,6 +6,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DateSearchAndBook from './search';
 import Rooms from '../../rooms';
+import RoomDetails from "./RoomDetails"
+
 
 
 function Home() {
@@ -23,10 +25,13 @@ function Home() {
       <NavbarComp />
       <Router>
       <Routes>
+       
         <Route path="/" element={<DateSearchAndBook />} />
         <Route path="/rooms" element={<Rooms />} />
+        <Route path="/room-details" element={<RoomDetails />} />
       </Routes>
     </Router>
+    
     </div>
   );
 }

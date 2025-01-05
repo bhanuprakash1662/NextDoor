@@ -18,7 +18,7 @@
   color: #5a3921; /* Dark brown text */
   border: 1px solid #d88f5d; /* Brighter brown border */
   border-radius: 4px;
-  background: linear-gradient(135deg, #fff, #f3f1d1); /* Bright white to warm light yellow */
+  background: linear-gradient(135deg, #5c3e3e, #6d6a47); /* Bright white to warm light yellow */
 }
 
 .input:focus {
@@ -57,6 +57,9 @@
   padding: 10px 20px;
   border-radius: 5px;
 }
+#btn{
+  background-color: #000;
+}
 
 .search-button:hover {
   background: linear-gradient(135deg, #ff7043, #ffeb3b); /* Reverse gradient for hover effect */
@@ -65,7 +68,7 @@
 
 .book-button {
   background: linear-gradient(135deg, #d32f2f, #f44336); /* Red to bright red gradient */
-  color: #fff; /* White text */
+  color: #3a1616; /* White text */
   padding: 10px 20px;
   border-radius: 5px;
 }

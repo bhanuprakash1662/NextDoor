@@ -1,0 +1,74 @@
+.room-details-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffeb3b, #ffb84d, #a67c52); /* Yellow to deep yellow to brown gradient */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.room-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.room-details-info {
+  text-align: center;
+  color: #5a3e20;
+}
+
+.room-details-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #ffeb3b, #f7dc6f, #ffb84d); /* Yellow gradient */
+  background-clip: text; /* Standard for Firefox and modern browsers */
+  -webkit-background-clip: text; /* For WebKit-based browsers like Chrome and Safari */
+  color: transparent; /* Makes the text transparent to show the gradient */
+}
+
+
+.room-details-info p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #5a3e20;
+}
+
+.room-address {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ff5722; /* Bright orange color */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.confirm-booking-button,
+.back-button {
+  margin-top: 10px;
+  padding: 12px 24px;
+  background-image: linear-gradient(90deg, #ffeb3b, #f9d75e, #a67c52); /* More variation in yellow to brown gradient */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s, background-image 0.3s ease; /* Transition on background-image */
+}
+
+.confirm-booking-button:hover,
+.back-button:hover {
+  transform: scale(1.05); /* Slightly increase the size on hover */
+  background-image: linear-gradient(90deg, #ff9800, #ff7043, #f57c00); /* Change gradient on hover */
+}
+
+
+.back-button {
+  background: linear-gradient(90deg, #ffeb3b, #7d5a38, #e3c18b); /* Yellow with hints of tan */
+}
+
+.back-button:hover {
+  background: linear-gradient(90deg, #ffdc5c, #a67c52); /* More intense hover effect */
+}

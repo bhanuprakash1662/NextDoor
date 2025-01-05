@@ -140,7 +140,7 @@ const DateSearchAndBook = () => {
         onChange={(e) => setEndDate(e.target.value)}
         className="p-2 text-sm border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
-      <button
+      <button id='btn'
         onClick={handleSearch}
         className="px-4 py-2 text-sm text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
