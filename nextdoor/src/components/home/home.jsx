@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DateSearchAndBook from './search';
 import Rooms from '../../rooms';
 import RoomDetails from "./RoomDetails"
+import Payment from "./Payment";
+import Confirmation from "./Confirmation";
 
 
 
@@ -29,6 +31,8 @@ function Home() {
         <Route path="/" element={<DateSearchAndBook />} />
         <Route path="/rooms" element={<Rooms />} />
         <Route path="/room-details" element={<RoomDetails />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/confirmation" element={<Confirmation />} />
       </Routes>
     </Router>
     

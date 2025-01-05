@@ -1,0 +1,50 @@
+.payment-container, .confirmation-container {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #FFEB3B, #FF8C00); /* Gradient background from yellow to orange */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .payment-options button, .payment-form button, .back-to-home {
+    padding: 12px 24px;
+    background: linear-gradient(90deg, #00bcd4, #008c8c); /* Gradient button background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .payment-options button:hover, .payment-form button:hover, .back-to-home:hover {
+    background: linear-gradient(90deg, #008c8c, #00bcd4); /* Reversed gradient on hover */
+  }
+  
+  .payment-options {
+    margin-bottom: 20px;
+  }
+  
+  .payment-form input {
+    padding: 10px;
+    margin-top: 10px;
+    width: 80%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .payment-form input:focus {
+    outline: none;
+    border-color: #00bcd4; /* Focused border color */
+  }
+  
+  .back-to-home {
+    background: linear-gradient(90deg, #4caf50, #388e3c); /* Green gradient for back button */
+  }
+  
+  .back-to-home:hover {
+    background: linear-gradient(90deg, #388e3c, #4caf50); /* Hover effect for back button */
+  }
+  
