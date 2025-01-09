@@ -9,11 +9,8 @@
 }
 
 .room-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Adjust the width */
+  height: auto; /* Maintain the aspect ratio */
 }
 
 .room-details-info {
@@ -63,6 +60,13 @@
   transform: scale(1.05); /* Slightly increase the size on hover */
   background-image: linear-gradient(90deg, #ff9800, #ff7043, #f57c00); /* Change gradient on hover */
 }
+
+/* Add active state for confirm-booking-button */
+.confirm-booking-button:active {
+  background-image: linear-gradient(90deg, #f57c00, #d35400, #a67c52); /* Different gradient when clicked */
+  transform: scale(0.95); /* Slightly shrink the button on click */
+}
+
 
 
 .back-button {

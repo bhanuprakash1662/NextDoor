@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import "./Payment.css"
 
 const Payment = () => {
   const { state: { room } } = useLocation();
@@ -14,7 +15,12 @@ const Payment = () => {
   return (
     <div className="payment-container">
       <h2>Payment for Room in {room.city}</h2>
-      <img src={room.roomPic} alt={`Room in ${room.city}`} className="room-image" />
+      <img
+        src={room.roomPic}
+        alt={`Room in ${room.city}`}
+        className="room-image"
+        style={{ width: '300px', height: 'auto' }} // Decreasing the image size
+      />
       <div className="payment-options">
         <h3>Select Payment Method</h3>
         <button onClick={() => setPaymentMethod('UPI')}>Pay via UPI</button>
