@@ -1,0 +1,62 @@
+/* Footer Styles */
+.footer-container {
+    background: linear-gradient(135deg, #ffeb3b, #f9d75e, #a67c52); /* Same gradient as modal */
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+  
+  .footer-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-link:hover {
+    color: #343a40;
+  }
+  
+  .footer-social-media {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+  }
+  
+  .social-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 0 10px;
+  }
+  
+  .social-link:hover {
+    color: #343a40;
+  }
+  
+  .footer-bottom {
+    font-size: 0.8rem;
+    margin-top: 10px;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
