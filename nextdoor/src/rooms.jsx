@@ -1,185 +1,211 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './Rooms.css'; // Import the CSS file
+import Banjara from "./assests/images/Banjara.jpg"
+import Gachibowil from "./assests/images/Gachibowil.jpg"
+import Ameerpet from "./assests/images/Ameerpet.jpg"
+import Secunderabad from "./assests/images/Secunderabad.jpg"
+import Charminar from "./assests/images/Charminar.jpg"
+import Kondapur from "./assests/images/Kondapur.jpg"
+import Madhapur from "./assests/images/Madhapur.jpg"
+import Secunderabad1 from "./assests/images/Secunderabad1.jpg"
+import Abids from "./assests/images/Abids.jpg"
+import Kukatpally from "./assests/images/Kukatpally.jpg"
+import Uppal from "./assests/images/Uppal.jpg"
+import Miyapur from "./assests/images/Miyapur.jpg"
+import LBnagar from "./assests/images/LBnagar.jpg"
+import Mehdipatnam from "./assests/images/Mehdipatnam.jpg"
+import Ameerpet1 from "./assests/images/Ameerpet1.jpg"
+import Dilsukhnagar from "./assests/images/Dilsukhnagar.jpg"
+import Tarnaka from "./assests/images/Tarnaka.jpg"
+import Somajiguda from "./assests/images/Somajiguda.jpg"
+import Malakpet from "./assests/images/Malakpet.jpg"
+import Attapur from "./assests/images/Attapur.jpg"
+import Kothapet from "./assests/images/Kothapet.jpg"
+import Himayatnagar from "./assests/images/Himayatnagar.jpg"
+import SRNagar from "./assests/images/SRNagar.jpg"
+import Chandanagar from "./assests/images/Chandanagar.jpg" 
+
+
 
 const mockRoomData = [
   {
     "id": 1,
     "city": "Hyderabad - Banjara Hills",
-    "dateFrom": "2025-01-05",
-    "dateTo": "2025-01-10",
-    "roomPic": "https://example.com/images/room_banjara_hills.jpg",
+    "dateFrom": "2025-02-10",
+    "dateTo": "2025-02-15",
+    "roomPic": Banjara,
     "price": 150,
     "rating": 4.7
   },
   {
     "id": 2,
     "city": "Hyderabad - Jubilee Hills",
-    "dateFrom": "2025-01-06",
-    "dateTo": "2025-01-12",
-    "roomPic": "https://example.com/images/room_jubilee_hills.jpg",
+    "dateFrom": "2025-02-06",
+    "dateTo": "2025-02-12",
+    "roomPic": Gachibowil,
     "price": 180,
     "rating": 4.8
   },
   {
     "id": 3,
     "city": "Hyderabad - Hitech City",
-    "dateFrom": "2025-01-08",
-    "dateTo": "2025-01-14",
-    "roomPic": "https://example.com/images/room_hitech_city.jpg",
+    "dateFrom": "2025-02-08",
+    "dateTo": "2025-02-14",
+    "roomPic":Ameerpet,
     "price": 200,
     "rating": 4.9
   },
   {
     "id": 4,
     "city": "Hyderabad - Gachibowli",
-    "dateFrom": "2025-01-09",
-    "dateTo": "2025-01-15",
-    "roomPic": "https://example.com/images/room_gachibowli.jpg",
+    "dateFrom": "2025-02-09",
+    "dateTo": "2025-02-15",
+    "roomPic": Secunderabad,
     "price": 170,
     "rating": 4.6
   },
   {
     "id": 5,
     "city": "Hyderabad - Charminar",
-    "dateFrom": "2025-01-07",
-    "dateTo": "2025-01-13",
-    "roomPic": "https://example.com/images/room_charminar.jpg",
+    "dateFrom": "2025-02-07",
+    "dateTo": "2025-02-13",
+    "roomPic": Charminar,
     "price": 120,
     "rating": 4.3
   },
   {
     "id": 6,
     "city": "Hyderabad - Kondapur",
-    "dateFrom": "2025-01-10",
-    "dateTo": "2025-01-16",
-    "roomPic": "https://example.com/images/room_kondapur.jpg",
+    "dateFrom": "2025-02-10",
+    "dateTo": "2025-02-16",
+    "roomPic": Kondapur,
     "price": 160,
     "rating": 4.5
   },
   {
     "id": 7,
     "city": "Hyderabad - Madhapur",
-    "dateFrom": "2025-01-11",
-    "dateTo": "2025-01-17",
-    "roomPic": "https://example.com/images/room_madhapur.jpg",
+    "dateFrom": "2025-02-11",
+    "dateTo": "2025-02-17",
+    "roomPic": Madhapur,
     "price": 190,
     "rating": 4.7
   },
   {
     "id": 8,
     "city": "Hyderabad - Secunderabad",
-    "dateFrom": "2025-01-08",
-    "dateTo": "2025-01-13",
-    "roomPic": "https://example.com/images/room_secunderabad.jpg",
+    "dateFrom": "2025-02-08",
+    "dateTo": "2025-02-13",
+    "roomPic":Secunderabad1,
     "price": 130,
     "rating": 4.4
   },
   {
     "id": 9,
     "city": "Hyderabad - Begumpet",
-    "dateFrom": "2025-01-06",
-    "dateTo": "2025-01-11",
-    "roomPic": "https://example.com/images/room_begumpet.jpg",
+    "dateFrom": "2025-02-06",
+    "dateTo": "2025-02-11",
+    "roomPic": "https://5.imimg.com/data5/SELLER/Default/2024/1/380559448/YA/HF/JN/210863407/air-conditioned-deluxe-rooms.jpeg",
     "price": 140,
     "rating": 4.5
   },
   {
     "id": 10,
     "city": "Hyderabad - Abids",
-    "dateFrom": "2025-01-09",
-    "dateTo": "2025-01-14",
-    "roomPic": "https://example.com/images/room_abids.jpg",
+    "dateFrom": "2025-02-09",
+    "dateTo": "2025-02-14",
+    "roomPic":Abids,
     "price": 125,
     "rating": 4.2
   },
   {
     "id": 11,
     "city": "Hyderabad - Kukatpally",
-    "dateFrom": "2025-01-12",
-    "dateTo": "2025-01-18",
-    "roomPic": "https://example.com/images/room_kukatpally.jpg",
+    "dateFrom": "2025-02-12",
+    "dateTo": "2025-02-18",
+    "roomPic":Kukatpally,
     "price": 150,
     "rating": 4.6
   },
   {
     "id": 12,
     "city": "Hyderabad - Uppal",
-    "dateFrom": "2025-01-07",
-    "dateTo": "2025-01-14",
-    "roomPic": "https://example.com/images/room_uppal.jpg",
+    "dateFrom": "2025-02-07",
+    "dateTo": "2025-02-14",
+    "roomPic": Uppal,
     "price": 100,
     "rating": 4.2
   },
   {
     "id": 13,
     "city": "Hyderabad - Miyapur",
-    "dateFrom": "2025-01-09",
-    "dateTo": "2025-01-16",
-    "roomPic": "https://example.com/images/room_miyapur.jpg",
+    "dateFrom": "2025-02-09",
+    "dateTo": "2025-02-16",
+    "roomPic": Miyapur,
     "price": 135,
     "rating": 4.4
   },
   {
     "id": 14,
     "city": "Hyderabad - LB Nagar",
-    "dateFrom": "2025-01-10",
-    "dateTo": "2025-01-15",
-    "roomPic": "https://example.com/images/room_lb_nagar.jpg",
+    "dateFrom": "2025-02-10",
+    "dateTo": "2025-02-15",
+    "roomPic": LBnagar,
     "price": 110,
     "rating": 4.3
   },
   {
     "id": 15,
     "city": "Hyderabad - Mehdipatnam",
-    "dateFrom": "2025-01-08",
-    "dateTo": "2025-01-13",
-    "roomPic": "https://example.com/images/room_mehdipatnam.jpg",
+    "dateFrom": "2025-02-08",
+    "dateTo": "2025-02-13",
+    "roomPic": Mehdipatnam,
     "price": 125,
     "rating": 4.5
   },
   {
     "id": 16,
     "city": "Hyderabad - Ameerpet",
-    "dateFrom": "2025-01-05",
-    "dateTo": "2025-01-11",
-    "roomPic": "https://example.com/images/room_ameerpet.jpg",
+    "dateFrom": "2025-02-05",
+    "dateTo": "2025-02-11",
+    "roomPic": Ameerpet1,
     "price": 140,
     "rating": 4.4
   },
   {
     "id": 17,
     "city": "Hyderabad - Dilsukhnagar",
-    "dateFrom": "2025-01-09",
-    "dateTo": "2025-01-14",
-    "roomPic": "https://example.com/images/room_dilsukhnagar.jpg",
+    "dateFrom": "2025-02-09",
+    "dateTo": "2025-02-14",
+    "roomPic": Dilsukhnagar,
     "price": 120,
     "rating": 4.3
   },
   {
     "id": 18,
     "city": "Hyderabad - Tarnaka",
-    "dateFrom": "2025-01-06",
-    "dateTo": "2025-01-12",
-    "roomPic": "https://example.com/images/room_tarnaka.jpg",
+    "dateFrom": "2025-02-06",
+    "dateTo": "2025-02-12",
+    "roomPic":Tarnaka,
     "price": 115,
     "rating": 4.2
   },
   {
     "id": 19,
     "city": "Hyderabad - SR Nagar",
-    "dateFrom": "2025-01-07",
-    "dateTo": "2025-01-14",
-    "roomPic": "https://example.com/images/room_sr_nagar.jpg",
+    "dateFrom": "2025-02-07",
+    "dateTo": "2025-02-14",
+    "roomPic":SRNagar,
     "price": 130,
     "rating": 4.4
   },
   {
     "id": 20,
     "city": "Hyderabad - Himayatnagar",
-    "dateFrom": "2025-01-05",
-    "dateTo": "2025-01-10",
-    "roomPic": "https://example.com/images/room_himayatnagar.jpg",
+    "dateFrom": "2025-02-05",
+    "dateTo": "2025-02-10",
+    "roomPic": Himayatnagar,
     "price": 150,
     "rating": 4.6
   },
@@ -188,7 +214,7 @@ const mockRoomData = [
     "city": "Hyderabad - Somajiguda",
     "dateFrom": "2025-01-08",
     "dateTo": "2025-01-13",
-    "roomPic": "https://example.com/images/room_somajiguda.jpg",
+    "roomPic": Somajiguda,
     "price": 155,
     "rating": 4.7
   },
@@ -197,7 +223,7 @@ const mockRoomData = [
     "city": "Hyderabad - Malakpet",
     "dateFrom": "2025-01-06",
     "dateTo": "2025-01-12",
-    "roomPic": "https://example.com/images/room_malakpet.jpg",
+    "roomPic": Malakpet,
     "price": 100,
     "rating": 4.1
   },
@@ -206,7 +232,7 @@ const mockRoomData = [
     "city": "Hyderabad - Attapur",
     "dateFrom": "2025-01-09",
     "dateTo": "2025-01-15",
-    "roomPic": "https://example.com/images/room_attapur.jpg",
+    "roomPic": Attapur,
     "price": 135,
     "rating": 4.3
   },
@@ -215,7 +241,7 @@ const mockRoomData = [
     "city": "Hyderabad - Kothapet",
     "dateFrom": "2025-01-10",
     "dateTo": "2025-01-14",
-    "roomPic": "https://example.com/images/room_kothapet.jpg",
+    "roomPic": Kothapet,
     "price": 120,
     "rating": 4.2
   },
@@ -224,7 +250,7 @@ const mockRoomData = [
     "city": "Hyderabad - Chandanagar",
     "dateFrom": "2025-01-07",
     "dateTo": "2025-01-13",
-    "roomPic": "https://example.com/images/room_chandanagar.jpg",
+    "roomPic": Chandanagar,
     "price": 145,
     "rating": 4.5
   },
@@ -233,7 +259,7 @@ const mockRoomData = [
     "city": "Hyderabad - Banjara Hills",
     "dateFrom": "2025-01-05",
     "dateTo": "2025-01-10",
-    "roomPic": "https://example.com/images/room_banjara_hills.jpg",
+    "roomPic": Banjara,
     "price": 150,
     "rating": 4.7
   }
